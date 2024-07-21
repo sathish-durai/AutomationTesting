@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'AutomationTestProject'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    implementation 'org.testng:testng:7.10.2'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.23.0'
+    implementation 'io.rest-assured:rest-assured:5.5.0'
+    implementation 'org.slf4j:slf4j-api:2.0.13'
+}
+
+test {
+    useJUnitPlatform()
+}
